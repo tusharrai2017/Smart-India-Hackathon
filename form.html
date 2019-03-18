@@ -1,0 +1,222 @@
+<html>
+<head>
+    <style>
+th{
+    font-weight: normal;
+border: 0.1vw solid black;
+    font-size: 50%;
+    padding: 0.2vw .5vw 0.2vw .5vw;
+
+}
+        td
+        {
+  border: 1px solid black;
+  text-align: left;
+  padding: .5vw;
+  height:50%;
+        }
+        table{
+            width: 100%;
+            border: 0.1vw solid blue;
+            tab-size: 50%;
+        }
+#tabla
+        {
+        color: black;
+        font-size:150%;
+        }
+#hi
+        {
+            color: black;
+			padding: .15vw .1vw .15vw .1vw;
+			background-color: #EAF1F6;
+            font-size: 150%;
+        }
+ul#single li
+        {
+            text-align: center;
+			padding: 0vw .2vw 0vw .2vw;
+			display: inline;
+			border:.1vw solid #48B2D6;
+        }
+#decider:hover
+        {
+            background: red;
+}
+#decider
+        {
+            background:grey;
+        }
+    #tus:HOVER
+        {
+background: RED;
+        }
+    #gau
+        {
+            background-color: #EAF1F6;
+        }
+    #bord
+        {
+            border:0.7vw solid #EAF1F6;
+        }
+    #sello
+        {
+            font-size: 70%;
+        }
+    </style>
+</head>
+<title>form</title>    
+<body>
+<div id="bord">
+<form>
+    <p id="gau"><select id="decider">
+        <option onclick="yourfunction()">Show</option>
+        <option onclick="myfunction()">Hide</option>
+     </select></p>
+<div id="content">
+<p>Event Number: <input type="text" id="event">     To : <input type="text" id="event1"></p>
+<p>Event Status:
+    <select>
+    <option>Published</option>
+    <option>Not Published</option>
+    </select>    
+</p>
+<p>Creation Date: <input type="time">      To: <input type="date"> </p>
+<p>Deadline date flag:
+    <select>
+    
+    </select></p>
+<p>Status:
+    <select>
+    
+    </select></p>
+<p>Response Time Frame:
+    <select>
+    
+    </select></p>    
+    <p><button id="tus" type="button" onclick="tabfunction()">Apply</button> <button id="tus" type="button" onclick="tabfunction1()" >Clear</button></p>
+    </div>
+</form>
+<div id="hi">
+<ul id="single">
+    <li>Create Response</li>
+    <li>Display Event</li>
+    <li>Display Response</li>
+    <li>Print Review</li>
+    <li>Refresh</li>
+    <li>Export</li>
+</ul>    
+</div>
+<div>
+<table id="tabla">
+<thead id="hi">
+<tr>
+<th>Event Number</th>
+<th>Event Description</th>
+<th>Event Type</th>
+<th>Event Status</th>
+<th>Response Number</th>
+<th>Response Status</th>
+<th>Response Version</th>
+<th>End date</th>
+<th>End time</th>
+<th>Event Version</th>
+</tr>    
+</thead>
+<tr id="sello">
+    <td id="c1"></td>
+    <td id="c2"></td>
+    <td id="c3"></td>
+    <td id="c4"></td>
+    <td id="c5"></td>
+    <td id="c6"></td>
+    <td id="c7"></td>
+    <td id="c8"></td>
+    <td id="c9"></td>
+    <td id="c10"></td>
+</tr>
+    <tr id="sello">
+    <td id="c11"></td>
+    <td id="c12"></td>
+    <td id="c13"></td>
+    <td id="c14"></td>
+    <td id="c15"></td>
+    <td id="c16"></td>
+    <td id="c17"></td>
+    <td id="c18"></td>
+    <td id="c19"></td>
+    <td id="c20"></td>
+
+ </tr>
+</table>       
+</div>
+    </div>
+</body>
+    
+<script type="text/javascript">
+function myfunction()
+    {
+var texts="";
+texts=document.getElementById("decider").value;
+var tus=document.getElementById("content");
+tus.style.display="none";
+    }
+function yourfunction()
+    {
+var texts="";
+texts=document.getElementById("decider").value;
+var tus=document.getElementById("content");
+tus.style.display="block";
+    }
+function tabfunction()
+    {
+        var tus="";
+    tus=document.getElementById("event").value;
+document.getElementById('c1').innerHTML=tus;
+        document.getElementById('c2').innerHTML= 'Reconditioning of BD155 and BP100 Segments' ;
+        document.getElementById('c3').innerHTML="Public Tender 2 bid";
+        document.getElementById('c4').innerHTML="Published";
+        document.getElementById('c5').innerHTML="    ";
+        document.getElementById('c6').innerHTML="No bid created";
+        document.getElementById('c8').innerHTML="03/01/2019";
+        document.getElementById('c9').innerHTML="18:00";
+        document.getElementById('c10').innerHTML="1";
+        var tan="";
+    tan=document.getElementById("event1").value;
+document.getElementById('c11').innerHTML=tan;
+     document.getElementById('c12').innerHTML="Reconditioning of BD185 and BP300 Segments";
+        document.getElementById('c13').innerHTML="Public Tender 1 bid";
+        document.getElementById('c14').innerHTML="Published";
+        document.getElementById('c15').innerHTML="    ";
+        document.getElementById('c16').innerHTML="Bid is created";
+        document.getElementById('c18').innerHTML="03/01/2019";
+        document.getElementById('c19').innerHTML="18:00";
+        document.getElementById('c20').innerHTML="2";
+        
+    }
+    function tabfunction1()
+    {
+document.getElementById('c1').innerHTML="    ";
+    document.getElementById('c2').innerHTML="    ";
+       document.getElementById('c3').innerHTML="    ";
+       document.getElementById('c4').innerHTML="    ";
+        document.getElementById('c5').innerHTML="    ";
+        document.getElementById('c6').innerHTML="    ";
+        document.getElementById('c7').innerHTML="    ";
+       document.getElementById('c8').innerHTML="    ";
+        document.getElementById('c9').innerHTML="    ";
+       document.getElementById('c10').innerHTML="    ";
+        document.getElementById('c11').innerHTML="    ";
+        document.getElementById('c12').innerHTML="    ";
+        document.getElementById('c13').innerHTML="    ";
+        document.getElementById('c14').innerHTML="    ";
+        document.getElementById('c15').innerHTML="    ";
+        document.getElementById('c16').innerHTML="    ";
+        document.getElementById('c17').innerHTML="    ";
+        document.getElementById('c18').innerHTML="    ";
+        document.getElementById('c19').innerHTML="    ";
+        document.getElementById('c20').innerHTML="    ";
+        
+    }
+</script>
+</html>

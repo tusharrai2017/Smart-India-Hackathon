@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title> Two bid tutorial</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+      <style type="text/css">
+    	    #mytxt{
+            font-family: 'Indie Flower', cursive;
+            background:#FFD662 ;
+            position: absolute;
+            border-radius: 5%;
+            position: absolute;
+            font-size: 2vw;      
+            width: 30%; 
+            top: 10%;
+            left: 70%;
+        }
+
+        
+        button{
+            border-radius: 20%;
+            position: relative;
+            float: right;
+            background-color: #0000ff;
+            color: WHITE;
+            font-size: 2vw; 
+        }
+        #aa{
+            margin-right: 5%;
+        }
+        #aaa{
+            margin-right: 5%;
+        }
+    </style>
+   </head>
+      <button id="a">Hints</button>
+    <button id="aa" onclick="yourfunction()">FAQ</button>
+    <button id="aaa" onclick="myfunction()">Home</button>               
+    <body>
+    <img src="Screenshot%20(26).png" alt=" " usemap="#first">
+        <map name="first">
+            <area shape="rect" coords="150,450,1200,550" href="two-bid25.html">
+        </map>
+  <div id="mytxt">
+        <p>For adding notes and attachments click on "Notes and Price Attachment" menu.</p>
+    </div>
+        <script type="text/javascript">
+$( "button" ).click(function() {
+  $( "#mytxt" ).slideToggle( "slow");
+});  
+function myfunction()
+{  
+document.location.href="index.html";
+}
+function yourfunction()
+{  
+document.location.href="https://powerful-plains-87976.herokuapp.com/";
+}
+   
+    </script>
+      </body>
+</html>

@@ -1,0 +1,421 @@
+<html>
+    
+<head>
+    
+    <title>slider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="jquery/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<style type="text/css">
+    body{
+        margin: 0;
+    }
+    #container {
+    width:auto;
+        height: 90%;
+    }
+#slider {
+    display:block;
+    width:auto;
+    height:100%;
+    padding:0;
+    overflow:hidden;
+    }    
+#prev, #next {
+    bottom:0;
+    display:block;
+    width:120px;
+    background-color:#00ABFF;
+    padding:5px;
+    border:none;
+    font-size:17px;
+    color:#fff;
+    }
+#prev {
+    float:left;
+    }
+#next {
+    float:right;
+    }
+    img{
+        width: 100%;
+        height: 95%;
+    }
+
+    .mytxt{
+            font-weight: bold;
+            font-family: 'Indie Flower', cursive;
+            text-align: justify;
+            background:#FFD662 ;
+            position: absolute;
+            border-radius: 20px;
+            opacity:0.2;
+    }
+    #tool1{
+			font-size: 30px;
+            height: 13%;
+            width: 40%; 
+            top: 65%;
+            left: 60%;
+		}
+    #imag1
+    {
+        height:8%;
+        width:5%;
+        margin-bottom: 0%;
+        float:right;
+    }
+    #imag
+    {
+        margin-top: 40%;
+        height:100%;
+    }
+    #bt
+    {
+        background: green;
+        color:white;
+        height:100%
+    }
+</style>  
+</head>
+<body> 
+<div id="imag1"><button id="bt" onclick="myfunction()">Go To home.</button><img src="faq.jpg" id="imag" onclick="yourfunction()"></div> 
+ <div id="container">
+    
+      <div class="mytxt" id="tool1">Click on Start button.Search for Control Panel</div>
+    <ul id="slider">
+        <li class="slide selected"><img src="Screenshot%20(2).png" alt=""/>
+      </li> 
+    
+        <li class="slide selected"><img src="Screenshot%20(3).png" alt=""/></li> 
+
+        <li class="slide"><img src="Screenshot%20(4).png" alt=""/>
+</li>
+
+        <li class="slide"><img src="Screenshot%20(5).png" alt=""/></li>
+
+        <li class="slide"><img src="Screenshot%20(6).png" alt=""/></li>
+
+        <li class="slide"><img src="Screenshot%20(7).png" alt=""/></li>
+
+        <li class="slide"><img src="something.png" alt=""/></li>
+
+        <li class="slide"><img src="Screenshot%20(18).png" alt=""/>
+      </li>
+
+        <li class="slide"><img src="Screenshot%20(19).png" alt=""/>
+      </li>
+
+        <li class="slide"><img src="Screenshot%20(20).png" alt=""/>
+      </li>
+
+        <li class="slide"><img src="Screenshot%20(21).png" alt=""/>
+      </li>
+
+        <li class="slide"><img src="Screenshot%20(23).png" alt=""/>
+      </li>
+
+        <li class="slide"><img src="Screenshot%20(25).png" alt=""/>
+      </li>
+
+            <li class="slide"><img src="Screenshot%20(27).png" alt=""/>
+      </li>
+
+        <li class="slide"><img src="Screenshot%20(30).png" alt=""/>
+      </li>
+
+        <li class="slide"><img src="Screenshot%20(32).png" alt=""/>
+      </li>
+
+        <li class="slide"><img src="Screenshot%20(36).png" alt=""/>
+      </li>
+
+        <li class="slide"><img src="Screenshot%20(38).png" alt=""/>
+      </li>
+        <li class="slide"><img src="Screenshot%20(40).png" alt=""/>
+      </li>
+        <li class="slide"><img src="Screenshot%20(42).png" alt=""/>
+      </li>
+        <li class="slide"><img src="Screenshot%20(44).png" alt=""/>
+      </li>
+        <li class="slide"><img src="Screenshot%20(46).png" alt=""/>
+      </li>
+        <li class="slide"><img src="Screenshot%20(47).png" alt=""/>
+      </li>
+
+        <li class="slide"><img src="something.png" alt=""/></li>
+    </ul>
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+    <div style="clear:both"></div>
+</div> 
+</body>
+<script>
+function conditions(count){
+    if($count==1)
+
+     {  
+        
+        $("#tool1").css({"font-size": "30px", "height": "13%","width":"40%","top":"65%","left":"60%"});
+        $("#tool1").html('Click on Start button.Search for Control Panel');
+
+     }
+     else if($count==2)
+     {
+        
+        $("#tool1").css({"font-size": "30px", "height": "10%","width":"30%","top":"65%","left":"70%"});
+        $("#tool1").html('Open Control Panel');
+     }
+     else if($count==3)
+     {
+        $("#tool1").css({"font-size": "30px", "height": "10%","width":"20%","top":"65%","left":"75%"});
+        $("#tool1").html('Select Programs');
+     }
+     else if($count==4)
+     {  
+        $("#tool1").css({"font-size": "30px", "height": "13%","width":"30%","top":"65%","left":"65%"});
+        $("#tool1").html('Go to Programs and features.');
+     }
+     else if($count==5)
+        {
+
+            $("#tool1").css({"font-size": "20px", "height": "17%","width":"30%","top":"65%","left":"65%"});
+            $("#tool1").html('Check if "Java 8(or any higher version)" is installed on your system.If not install using <a href="https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html" target="_blank">Java 8 Update 201 (32 Bit) Download Link</a>')
+        }
+        else if($count==6)
+        {
+            $("#tool1").css({"font-size": "20px", "height": "17%","width":"30%","top":"65%","left":"65%"});
+            $("#tool1").html('Check if "Microsoft visual c++" is installed on your system.If not install using <a href="https://www.microsoft.com/en-in/download/details.aspx?id=5555" target="_blank">VC++ 2010 (32 Bit) Download Link</a>')
+        }
+        else if($count==7)
+        {
+            $("#tool1").css({"font-size": "25px", "height": "17%","width":"25%","top":"65%","left":"65%"});
+            $("#tool1").html('Right Click on Internet Explorer and "Run as administrator"')
+        }
+        else if($count==8)
+        {
+            $("#tool1").css({"font-size": "30px", "height": "17%","width":"20%","top":"65%","left":"75%"});
+            $("#tool1").html('Right Click and Selct "Menu"')
+        }
+        else if($count==9)
+        {
+
+          
+            $("#tool1").css({"font-size": "26px", "height": "17%","width":"25%","top":"65%","left":"65%"});
+            $("#tool1").html('From menu bar go to help and select "About Internet Explorer"')
+        }
+        else if($count==10)
+        {
+            
+            $("#tool1").css({"font-size": "26px", "height": "17%","width":"25%","top":"65%","left":"67%"});
+            $("#tool1").html('Check your Internet Explorer version')
+        }
+        else if($count==11)
+        {
+            $("#tool1").css({"font-size": "30px", "height": "13%","width":"40%","top":"65%","left":"60%"});
+            $("#tool1").html('Click on Tools.Go-to pop-up blocker and Turn On pop-up bocker')
+        }
+        else if($count==12)
+        {
+            
+            $("#tool1").css({"font-size": "30px", "height": "13%","width":"40%","top":"65%","left":"60%"});
+            $("#tool1").html('Click on Manage Add-ons in tools')
+        }
+        else if($count==13)
+        {
+            
+            $("#tool1").css({"font-size": "30px", "height": "13%","width":"20%","top":"65%","left":"75%"});
+            $("#tool1").html('Enable java tm')
+        }
+        else if($count==14)
+        {
+            
+            $("#tool1").css({"font-size": "30px", "height": "13%","width":"30%","top":"65%","left":"68%"});
+            $("#tool1").html('Go to "Internet Options" in tools')
+        }
+        else if($count==15)
+        {
+            
+            $("#tool1").css({"font-size": "30px", "height": "13%","width":"40%","top":"65%","left":"60%"});
+            $("#tool1").html('go to "security" -> Select trusted sites -> Click on Sites')
+        }
+        else if($count==16)
+        {
+            
+            $("#tool1").css({"font-size": "30px", "height": "13%","width":"35%","top":"65%","left":"63%"});
+            $("#tool1").html('Add "beml.com" as a trusted site')
+        }
+        else if($count==17)
+        {
+            
+            $("#tool1").css({"font-size": "30px", "height": "13%","width":"35%","top":"65%","left":"62%"});
+            $("#tool1").html('Click on "Custom level" -> Enable "Allow Scripts"')
+        }
+        else if($count==18)
+        {
+            
+            $("#tool1").css({"font-size": "30px", "height": "13%","width":"30%","top":"65%","left":"62%"});
+            $("#tool1").html('Enable "Signed ActiveX controls"')
+        }
+        else if($count==19)
+        {
+            
+            $("#tool1").css({"font-size": "30px", "height": "13%","width":"30%","top":"65%","left":"62%"});
+            $("#tool1").html('Enable "unsigned ActiveX controls"')
+        }
+        else if($count==20)
+        {
+            
+            $("#tool1").css({"font-size": "30px", "height": "13%","width":"30%","top":"65%","left":"63%"});
+            $("#tool1").html('Enable "display mixed content"')
+        }
+        else if($count==21)
+        {
+            
+            $("#tool1").css({"font-size": "30px", "height": "13%","width":"30%","top":"65%","left":"63%"});
+            $("#tool1").html('Disable "pop-up blocker"')
+        }
+        else if($count==22)
+        {
+            
+            $("#tool1").css({"font-size": "30px", "height": "13%","width":"30%","top":"65%","left":"63%"});
+            $("#tool1").html('Disable "Windows defender Smart Screen"')
+        }
+        else if($count==23)
+        {
+            
+            $("#tool1").css({"font-size": "30px", "height": "13%","width":"30%","top":"65%","left":"63%"});
+            $("#tool1").html('Click "OK" and "Yes" to change the settings')
+
+        }
+        else if($count==24)
+        {
+            
+            $("#tool1").css({"font-size": "25px", "height": "15%","width":"40%","top":"65%","left":"60%"});
+            $("#tool1").html('Now your system is ready. Run Internet Explorer as administrator to proceed.')
+
+        }
+     else{}
+
+
+
+}
+    var $count=1;
+ var $first = $('li:first', 'ul'),
+      $last = $('li:last', 'ul');
+      $(document).keydown(function(e){
+        if(e.which==39)
+        {
+   var $next,
+        $selected = $(".selected");
+    // get the selected item
+    // If next li is empty , get the first
+    
+    $next = $selected.next('li').length ? $selected.next('li') : $first;
+    if($next!=$first)
+    {
+        $count++;
+        conditions($count)
+       $selected.removeClass("selected").fadeOut('fast');
+     $next.addClass('selected').fadeIn('fast');
+     
+ }
+    else{
+        document.location.replace("index.html");
+    }            
+        }
+      });
+$("#next").click(function () {
+   var $next,
+        $selected = $(".selected");
+    // get the selected item
+    // If next li is empty , get the first
+    
+    $next = $selected.next('li').length ? $selected.next('li') : $first;
+    if($next!=$first)
+    {
+        $count++;
+        conditions($count)
+       $selected.removeClass("selected").fadeOut('fast');
+     $next.addClass('selected').fadeIn('fast');
+     
+ }
+    else{
+        document.location.replace("index.html");
+    }
+});
+$(document).keydown(function(e){
+    if(e.which==37)
+    {
+           var $prev,
+        $selected = $(".selected");
+    // get the selected item
+    // If prev li is empty , get the last
+    $prev = $selected.prev('li').length ? $selected.prev('li') : $last;
+    if($prev!=$last)
+    {
+        $count--;
+        conditions($count)
+        $selected.removeClass("selected").fadeOut('fast');
+    $prev.addClass('selected').fadeIn('fast');
+    if(count==0)
+    {
+        $("#tool1").html("hello");
+    }
+}
+    }
+});
+$("#prev").click(function () {
+
+    var $prev,
+        $selected = $(".selected");
+    // get the selected item
+    // If prev li is empty , get the last
+    $prev = $selected.prev('li').length ? $selected.prev('li') : $last;
+    if($prev!=$last)
+    {
+        $count--;
+        conditions($count)
+        $selected.removeClass("selected").fadeOut('fast');
+    $prev.addClass('selected').fadeIn('fast');
+    if(count==0)
+    {
+        $("#tool1").html("hello");
+    }
+}
+});
+        $(document).ready(function(){
+            $(".mytxt").hover(function(){
+            $(".mytxt").css("opacity","0.8");
+        },function(){
+            $(".mytxt").css("opacity","0.2");
+        });
+        $("#next").hover(function(){
+            $("#next").css("opacity","0.8");
+        },function(){
+            $("#next").css("opacity","0.2");
+        });
+            $("#prev").hover(function(){
+            $("#prev").css("opacity","0.8");
+        },function(){
+            $("#prev").css("opacity","0.2");
+        });
+        });
+
+function myfunction()
+{  
+document.location.href="index.html";
+}
+function yourfunction()
+{  
+document.location.href="https://powerful-plains-87976.herokuapp.com/";
+}   
+</script>
+    
+
+    
+</html>
